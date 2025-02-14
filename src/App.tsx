@@ -1,16 +1,17 @@
-import { Button } from "./components/ui/button"
+import Hero from './components/Hero';
+import Navbar from './components/Navbar';
+import { ThemeProvider } from './components/theme-provider';
 
 function App() {
-
   return (
-    <>
-      <h1 className='text-5xl font-extrabold'>
-        MLSC WEB
-      </h1>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Navbar />
 
-      <Button>Shadcn Button</Button>
-    </>
-  )
+      <section className="mt-20">
+        <Hero />
+      </section>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
